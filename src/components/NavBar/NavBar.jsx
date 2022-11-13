@@ -1,6 +1,7 @@
 import React from 'react'
 import CartWidget from './CartWidget'
 import "./navbar.css"
+import {Link} from "react-router-dom";
 
 
 
@@ -14,16 +15,22 @@ function NavBar() {
         <div className='navGroupList'>
             <ul className='linkList'>
                 
-                <li>
-                    <a href="http://">Home</a>
+                <li id='link'>
+                    <Link to="/">Inicio</Link>
                 </li>
-                <li>
-                     <a href="http://">Contacto</a>
+                <li id='link'>
+                    <Link to="/detail">Detalle</Link>
                 </li>
-                <li>
-                     <a href="http://">Nosotros</a>
+                <li id='link'>
+                    <a href="/">Productos</a>
                 </li>
-                <li>
+                <li id='link'>
+                     <a href="/">Contacto</a>
+                </li>
+                <li id='link'>
+                     <a href="/">Nosotros</a>
+                </li>
+                <li id='link'>
                     <CartWidget counter="0"/>
                 </li>
          </ul>
@@ -32,4 +39,4 @@ function NavBar() {
   )
 }
 
-export default NavBar
+export default NavBar;

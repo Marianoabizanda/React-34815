@@ -1,19 +1,33 @@
 
+import React from "react";
 import './App.css';
 // importamos componentes
-import NavBar from './components/NavBar/NavBar';
+import ItemDetailContainer from "./components/itemDetail/ItemDetailContainer";
 import ItemListContainer from './components/ItemList/ItemListContainer';
+import NavBar from './components/NavBar/NavBar';
+
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
 
 
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
+      <BrowserRouter>
+
         <NavBar/>
-        <ItemListContainer text="Mis Productos"/>
-      </header>
-    </div>
+        
+        <Routes>
+          <Route path="/" element={ <ItemListContainer/> } />
+          <Route path="/detail/:idItem" element={<ItemDetailContainer/>} />
+
+          <Route path="*" element={ <h1>Error 404: Esta página no existe</h1> } />
+        </Routes>
+
+      </BrowserRouter>
+    </div>  
   );
 }
 

@@ -1,14 +1,49 @@
+import { useState, useEffect } from 'react';
 import React from 'react'
+import "./itemlist.css";
+import Item from './Item';
+import getItems from '../../Services/mockService';
 
 
-function ItemListContainer(props) {
+
+
+function ItemListContainer() {
+  const [products, setProducts] = useState([]);
+
+  async function getItemsAsync() {
+    let respuesta = await getItems();
+    setProducts(respuesta);
+  }
+
+   useEffect(() => {
+    getItemsAsync();
+    return () => {
+      console.log("Componente desmontado");
+    };
+      }, []);
+
   return (
-    <div>
-       
-        <h1>{props.text}</h1>
 
+    <div className="item-list">
+       
+      
+        {products.map((product) => {  /* por cada producto retorna...  */
+        return (
+            <Item
+            key={product.id}
+            id={product.id}
+            imgurl={product.imgurl}
+            title={product.title}
+            price={product.price}
+            category={product.category}
+            color="yellow"
+
+           />
+          )
+        })}
+        
     </div>
-  )
+  );
 }
 
 export default ItemListContainer
