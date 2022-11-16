@@ -11,7 +11,7 @@ function MyButton(props) {
 
   return (
     <button
-      onClick={handleClick}
+      onClick={props.onTouchButton}
       style={{ backgroundColor: colorBtn, marginBotton: "10px" }}
       className="btn"
     >

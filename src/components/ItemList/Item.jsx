@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 function Item({ title, imgurl, price, color, id }) {
 
-  const urlDetail = `/detail/{id}`;
+  const urlDetail = `/detail/${id}`;
 
   return (
     <div className="card">
@@ -20,9 +20,9 @@ function Item({ title, imgurl, price, color, id }) {
       </div>
 
       <Link to={urlDetail}>
-      <MyButton color={color}>
+        <MyButton onTouchButton={() => console.log("click")} color={color}>
           Ver más
-      </MyButton>
+        </MyButton>
       </Link>
     </div>
   );

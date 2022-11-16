@@ -4,14 +4,16 @@ import "./itemlist.css";
 import Item from './Item';
 import getItems from '../../Services/mockService';
 
+import { useParams } from "react-router-dom";
 
 
 
 function ItemListContainer() {
   const [products, setProducts] = useState([]);
+  const { idCategory } = useParams();
 
   async function getItemsAsync() {
-    let respuesta = await getItems();
+    let respuesta = await getItems(idCategory);
     setProducts(respuesta);
   }
 
@@ -20,7 +22,7 @@ function ItemListContainer() {
     return () => {
       console.log("Componente desmontado");
     };
-      }, []);
+      }, [idCategory]);
 
   return (
 

@@ -19,16 +19,13 @@ function NavBar() {
                     <Link to="/">Inicio</Link>
                 </li>
                 <li id='link'>
-                    <Link to="/detail">Detalle</Link>
+                    <Link to="/category/vino">Vinos</Link>
                 </li>
                 <li id='link'>
-                    <a href="/">Productos</a>
+                     <Link to="/category/cerveza">Cervezas</Link>
                 </li>
                 <li id='link'>
-                     <a href="/">Contacto</a>
-                </li>
-                <li id='link'>
-                     <a href="/">Nosotros</a>
+                     <Link to="/category/whisky">Whiskys</Link>
                 </li>
                 <li id='link'>
                     <CartWidget counter="0"/>

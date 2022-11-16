@@ -3,13 +3,9 @@
     object-fit: cover;
   }
   
-  .card-detail_img img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
+
   
-  .card-detail{
+  .card-detail-container{
     margin: 40px auto;
     min-height: 600px;
     width: 90%;
@@ -37,3 +33,4 @@
   .card-detail_muted{
     color: #8c8c8e
   }
+  

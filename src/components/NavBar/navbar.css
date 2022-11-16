@@ -20,7 +20,7 @@ flex-wrap: nowrap;
 .navGroupList{
     display: flex;
     justify-content: flex-end;
-    width: 91%;
+    width: 80%;
     top: 0;
     padding-top: 0;
     
