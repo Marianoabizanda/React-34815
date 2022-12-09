@@ -30,7 +30,7 @@ export function getSingleItem(idParam) { /*le paso como parametro id que utilizo
 
         setTimeout(() => {
             resolve(itemRequested);
-        },2000);
+        },1000);
     });
 }
 

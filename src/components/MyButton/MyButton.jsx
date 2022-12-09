@@ -4,10 +4,7 @@ import React, { useState } from "react";
 function MyButton(props) {
   let [colorBtn, setColorBtn] = useState(props.colorBtn);
 
-  function handleClick() {
-    setColorBtn("#555");
-    /* props.onTouchButton && props.onTouchButton(); */
-  }
+
 
   return (
     <button
@@ -20,4 +17,4 @@ function MyButton(props) {
   );
 }
 
-export default MyButton;
+export default MyButton;  

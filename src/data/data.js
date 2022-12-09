@@ -3,6 +3,7 @@ const products = [
     id: 1,
     title: "Alamos-Cabernet",
     price: 230,
+    discount: "20%",
     stock: 300,
     category: "vino",
     imgurl: "/images/images_vinos/AnyConv.com__0018-ALAMOS-CABERNET-300x300(1).webp"
@@ -10,6 +11,7 @@ const products = [
     id: 2,
     title: "Alamos-Chardonnay",
     price: 250,
+    discount: "25%",
     stock: 220 , 
     category: "vino",
     imgurl: "/images/images_vinos/AnyConv.com__0019-ALAMOS-CHARDONNAY-300x300.webp"
@@ -24,7 +26,7 @@ const products = [
     id: 4,
     title: "Aime Red Blend",
     price: 270,
-    stock: 450,
+    stock: 0,
     category: "vino",
     imgurl: "/images/images_vinos/AnyConv.com__Aime-Red-Blend-300x300.webp"
   },{
@@ -127,7 +129,7 @@ const products = [
     imgurl: "/images/images_whiskys/AnyConv.com__JACK-DANIELS-1-300x300.webp"
   }
   ]
-
+  
 
 
 export default products;
