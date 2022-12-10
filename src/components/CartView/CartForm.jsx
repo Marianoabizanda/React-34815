@@ -28,13 +28,12 @@ export default function CartForm(props) {
     }
   
     return (
-      // muchos fragments innecesarios
-  
+       
       <form onSubmit={onSubmit}>
         {/* convertir los imputs en componentes */}
   
         <div style={{ display: 'flex', marginBottom: 8 }}>
-          {/* Falta name al input y forHTML a los label*/}
+         
           <label htmlFor="name" style={{ width: '100px', marginRight: 4 }}>
             Nombre
           </label>
@@ -45,6 +44,7 @@ export default function CartForm(props) {
             type="text"
             onChange={onInputChange}
           />
+          
         </div>
   
         <div style={{ display: 'flex', marginBottom: 8 }}>

@@ -63,20 +63,21 @@ export function CartContextProvider({children}){
 
     function clear(){
     
-        /* Vaciar el carrito */
+        setCart([]);
     }
 
 
 
     function removeItem(idRemove){
-        /* cart.filter -> filtrar todos los items con un ID diferente a "idRemove" */
+       
         console.log("Eliminando el item:", idRemove);
         const newCart = [...cart];
-        newCart.pop();
-        setCart(newCart);
+        let itemRemove = newCart.filter((item)=> item.id !== idRemove );
+        setCart(itemRemove);
+
 
     }
-
+        
   
     function alreadyInCart(id){
         /* return true/false */

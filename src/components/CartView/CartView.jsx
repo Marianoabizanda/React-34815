@@ -52,15 +52,15 @@ function CartView() {
                 <h2>{item.title}</h2>
                 <h4>${item.price}</h4>
                 <h4>unidades:{item.count}</h4>
-                <MyButton onTouchButton={()=> removeItem(item.id)} colorBtn="red">X</MyButton>
+                <MyButton onTouchButton={()=> removeItem(item.id)} colorBtn="red">Quitar</MyButton>
             </div>
             ))}
             <CartForm onSubmit={handleCheckout}/>
             
-            <MyButton>Vaciar carrito</MyButton>
+            <button onClick={() => {clear()}}>Vaciar carrito</button>
             
     </div>
   );
 }
 
-export default CartView
+export default CartView;
