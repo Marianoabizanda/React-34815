@@ -35,7 +35,7 @@ Una vez clonado, dentro del proyecto, en la terminal, debe ejecutar el siguiente
 2. npm start
 
 
-# Profesor y tutor
+# Profesor y Tutor
 
 Profesor: Santiago Salkin.
 Tutor: Enzo Gustavo Agú.
