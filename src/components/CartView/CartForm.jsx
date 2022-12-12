@@ -1,5 +1,7 @@
 import { useState } from "react";
 import MyButton from "../MyButton/MyButton";
+import "./cartform.css"
+
 
 
 export default function CartForm(props) {
@@ -26,10 +28,13 @@ export default function CartForm(props) {
       evt.preventDefault();
       props.onSubmit(evt, data);
     }
+
+
   
     return (
-       
-      <form onSubmit={onSubmit}>
+     
+      <form onSubmit={onSubmit} className="form-container">
+       <div className="form">
         {/* convertir los imputs en componentes */}
   
         <div style={{ display: 'flex', marginBottom: 8 }}>
@@ -67,7 +72,7 @@ export default function CartForm(props) {
           <input
             required
             value={data.phone}
-            name="phone"
+            name="phone"  
             type="text"
             onChange={onInputChange}
           />
@@ -76,6 +81,7 @@ export default function CartForm(props) {
         <button
         disabled={ data.name ==="" || data.phone ==="" || data.email ==="" }
         type="submit">Finalizar compra</button>
+      </div>
       </form>
     );
   }

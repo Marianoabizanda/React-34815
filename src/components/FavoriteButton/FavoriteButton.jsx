@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-function ToggleButton(props) {
+function FavoriteButton(props) {
   const [isFavorite, setIsFavorite] = useState(false);
 
   const handleFavorite = () => {
@@ -15,4 +15,4 @@ function ToggleButton(props) {
   );
 }
 
-export default ToggleButton;
+export default FavoriteButton;

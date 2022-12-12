@@ -1,10 +1,13 @@
 import React, { useContext } from 'react';
 import { cartContext } from "../../context/cartContext";
-import { createOrder, exportArrayToFirestore } from '../../Services/firestore';
+import { createOrder, } from '../../Services/firestore';
 import { useNavigate } from "react-router-dom";
+import "./cartview.css";
 
 import MyButton from '../MyButton/MyButton';
 import CartForm from './CartForm';
+import Swal from "sweetalert2"
+
 
 
 function CartView() {
@@ -13,7 +16,6 @@ function CartView() {
 
     let navigate = useNavigate();
 
-  
 
     if (cart.length === 0) 
      return ( 
@@ -27,7 +29,7 @@ function CartView() {
        const order = {
          buyer: data,
          items: cart,
-         total: 0,
+         total: priceInCart(),
          date: new Date(), //objeto de tipo fecha
        };
        
@@ -35,31 +37,41 @@ function CartView() {
        navigate(`/thankyou/${orderId}`)
        /*${orderId}*/
        
-       //1. Hacer un rendering condicional -> guardamos el id en un State
-       //2. Sweet alert/ notificacion -> mostrando el id
-       //3. Redirigir al usuario a /thankyou
-       //3b. Redirigir al usuario a /thankyou/:orderid (persistencia)
-       
-       
+       await Swal.fire({
+         title:"Gracias por tu compra!",
+         text:`El código de tu orden es: ${orderId}`,
+         icon:"success",
+         button:"aceptar"
+       })
+           
      }
+   
+   
 
 
   return (
     <div className="cart-container">
+      <div className="cart-itemsList">
         { cart.map((item) => (
-            <div key={item.id} >
+            <div key={item.id} className="cart-item">
                 <img src={item.imgurl} alt={item.title} />
                 <h2>{item.title}</h2>
                 <h4>${item.price}</h4>
                 <h4>unidades:{item.count}</h4>
-                <MyButton onTouchButton={()=> removeItem(item.id)} colorBtn="red">Quitar</MyButton>
+                <MyButton onTouchButton={()=> removeItem(item.id)} colorBtn="red">Eliminar</MyButton>
             </div>
+            
             ))}
+             </div>
+          <div>
+            <h1>Total {priceInCart()}$</h1>
+          </div>
+          
+            <MyButton colorBtn="red" onTouchButton={() => {clear()}}>Vaciar carrito</MyButton>
             <CartForm onSubmit={handleCheckout}/>
-            
-            <button onClick={() => {clear()}}>Vaciar carrito</button>
-            
+          
     </div>
+    
   );
 }
 

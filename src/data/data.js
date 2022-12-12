@@ -87,46 +87,88 @@ const products = [
     imgurl: "/images/images_cervezas/andes-rubia-300x300_1.webp"
   },{
     id: 13,
+    title: "Andes negra Lata",
+    price: 260,
+    stock: 400,
+    category: "cerveza",
+    imgurl: "/images/images_cervezas/ANDES-300x300.webp"
+  },{
+    id: 14,
     title: "Stella rubia Lata",
     price: 250,
     stock: 400,
     category: "cerveza",
     imgurl: "/images/images_cervezas/AnyConv.com__Stella-Lata-300x300.webp"
   },{
-    id: 14,
+    id: 15,
     title: "Stella noir Lata",
     price: 240,
     stock: 380,
     category: "cerveza",
     imgurl: "/images/images_cervezas/AnyConv.com__project_20200925_1319378-011-1e181d976f40159ac316010508482964-1024-1024-300x300.webp"
   },{
-    id: 15,
+    id: 17,
     title: "Corona 710",
     price: 260,
     stock: 450,
     category: "cerveza",
     imgurl: "/images/images_cervezas/CERVEZA-CORONA-710-300x300.webp"
   },{
-    id: 16,
+    id: 18,
+    title: "Heineken Lata",
+    price: 300,
+    stock: 500,
+    category: "cerveza",
+    imgurl: "/images/images_cervezas/AnyConv.com__HEINEKEN-473-300x300(1).webp"
+  },{
+    id: 19,
+    title: "Michelob Lata",
+    price: 300,
+    stock: 200,
+    category: "cerveza",
+    imgurl: "/images/images_cervezas/Michelob-LATA.webp"
+  },{
+    id: 20,
     title: "100 Pipers",
     price: 2200,
     stock: 300,
     category: "whisky",
     imgurl: "/images/images_whiskys/AnyConv.com__100-PIPERS-300x300.webp"
   },{
-    id: 17,
+    id: 21,
     title: "Benchmark",
     price: 2800,
     stock: 410,
     category: "whisky",
     imgurl: "/images/images_whiskys/AnyConv.com__Benchmark-300x300.webp"
   },{
-    id: 18,
+    id: 22,
     title: "Jack Daniels 710",
     price: 3500,
     stock: 450,
     category: "whisky",
     imgurl: "/images/images_whiskys/AnyConv.com__JACK-DANIELS-1-300x300.webp"
+  },{
+    id: 23,
+    title: "Aberlour",
+    price: 3000,
+    stock: 100,
+    category: "whisky",
+    imgurl: "/images/images_whiskys/AnyConv.com__ABERLOUR-300x300.webp"
+  },{
+    id: 24,
+    title: "Ardebg",
+    price: 4100,
+    stock: 150,
+    category: "whisky",
+    imgurl: "/images/images_whiskys/AnyConv.com__ARDBEG-300x300.webp"
+  },{
+    id: 25,
+    title: "Cardhu",
+    price: 3600,
+    stock: 150,
+    category: "whisky",
+    imgurl: "/images/images_whiskys/AnyConv.com__CARDHU-300x300.webp"
   }
   ]
   

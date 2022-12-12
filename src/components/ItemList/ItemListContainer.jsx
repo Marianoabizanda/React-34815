@@ -9,6 +9,7 @@ import Loader from '../Loaders/Loader';
 
 
 
+
 function ItemListContainer() {
   const [products, setProducts] = useState(null);
   /*const [isLoading, setIsLoading] = useState(true);*/
@@ -35,8 +36,10 @@ function ItemListContainer() {
     getItemsAsync();
    }, [idCategory]);
 
+
      
   return (<div className='catalogo'>
+    <h1>Nuestros productos</h1> 
     {products ? <ItemList products={products}/> : <Loader/>}
      </div>  
      );

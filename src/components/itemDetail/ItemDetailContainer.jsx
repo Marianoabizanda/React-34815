@@ -29,7 +29,6 @@ function ItemDetailContainer() {
   }  
 
 
-  //if
 
    useEffect(() => {
        getItemsAsync(); /* 3- efecto que llama a la funcion y actualiza el estado*/

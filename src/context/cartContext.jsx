@@ -16,7 +16,7 @@ export function CartContextProvider({children}){
 
     function addToCart(product,count){ //funcion para manipular el useState y agregar al carrito.
 
-        /* encontrar si un item esta o no en el carrito... */
+        /* encuentra si un item esta o no en el carrito... */
         let itemAlreadyInCart = cart.findIndex( 
             (itemInCart) => itemInCart.id === product.id
             );
@@ -51,9 +51,9 @@ export function CartContextProvider({children}){
 
 
     function priceInCart(){
-        /* calcular el costo total de la compra */
+        /* calcula el costo total de la compra */
         let totalPrice = 0;
-        cart.forEach( (producto) => (totalPrice = totalPrice + (producto.price*producto.cantidad))
+        cart.forEach( (producto) => (totalPrice = totalPrice + producto.price * producto.count)
         );
         return totalPrice;
         
@@ -79,18 +79,7 @@ export function CartContextProvider({children}){
     }
         
   
-    function alreadyInCart(id){
-        /* return true/false */
-      }
 
-
-
-    // const value = {
-    //     saludoContext,
-    //     itemsIncart, 
-    //     cart 
-
-    // }
     
     // 3. retornamos el Provider del context creado
     return (

@@ -9,7 +9,7 @@ function Loader() {
     <Ping 
     size={100}
     speed={2} 
-    color="white" 
+    color="black" 
    />
   )
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import MyButton from "../MyButton/MyButton";
-import ToggleButton from "../ToggleButton/ToggleButton";
+import FavoriteButton from "../FavoriteButton/FavoriteButton";
 import "./item.css";
 import { Link } from "react-router-dom";
 
@@ -11,7 +11,7 @@ function Item({ title, imgurl, price, color, id, discount, stock }) {
 
   return (
     <div className="card">
-      <ToggleButton icon="♥" />
+      <FavoriteButton icon="♥" />
       <div className="card-img">
         <img src={imgurl} alt={title} />
       </div>
